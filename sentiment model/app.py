@@ -68,13 +68,20 @@ st.html("""
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # ========== MODEL LOADING ==========
-@st.cache_resource
 def load_model():
     """Load the fine-tuned model and tokenizer from the same folder as app.py"""
     try:
         # All files are in the same folder as app.py
         model_path = BASE_DIR
         
+        # === 🚀 ADDED CODE: AUTOMATICALLY FETCH MASSIVE MODEL ON STARTUP ===
+        # This downloads model.safetensors straight from your free Hugging Face repo
+        from huggingface_hub import hf_hub_download
+        hf_hub_download(
+            repo_id="NajafAli01/my-sentiment-model",  # Your HF repository ID
+            filename="model.safetensors",              # The specific 255MB file name
+            local_dir=model_path                       # Saves it directly into your app directory
+        )
         # Load label mappings
         label_mappings_path = os.path.join(model_path, "label_mappings.json")
         with open(label_mappings_path, "r") as f:
