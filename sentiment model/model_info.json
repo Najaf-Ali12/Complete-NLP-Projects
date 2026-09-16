@@ -1,0 +1,22 @@
+{
+  "validation": {
+    "eval_loss": 0.4043232500553131,
+    "eval_accuracy": 0.8843699399942851,
+    "eval_precision": 0.8889576404888015,
+    "eval_recall": 0.8843699399942851,
+    "eval_f1": 0.8859884275928116
+  },
+  "test": {
+    "accuracy": 0.8870368606533956,
+    "precision": 0.8906618042369677,
+    "recall": 0.8870368606533956,
+    "f1": 0.8883729607024101
+  },
+  "model_info": {
+    "base_model": "distilbert-base-uncased",
+    "num_epochs": 3,
+    "train_samples": 83989,
+    "val_samples": 10499,
+    "test_samples": 10499
+  }
+}
