@@ -6,7 +6,7 @@ This folder contains the fine-tuned NLP model used in the **[Finetuning Sentimen
 - **Task:** Sentiment Analysis (3-class text classification: Negative, Neutral, Positive)
 - **Model architecture:** DistilBERT (`DistilBertForSequenceClassification`), 6 layers, 12 attention heads, hidden size 768, vocab size 30,522, max 512 tokens
 - **Framework:** Hugging Face Transformers (PyTorch)
-- **Dataset:** [dataset name / link]
+- **Dataset:** syedkhalid0/Sentiment-Analysis
 
 ---
 
